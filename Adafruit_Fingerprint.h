@@ -6,12 +6,6 @@
  */
 
 #include "Arduino.h"
-#if defined(__AVR__) || defined(ESP8266)
-#include <SoftwareSerial.h>
-#elif defined(FREEDOM_E300_HIFIVE1)
-#include <SoftwareSerial32.h>
-#define SoftwareSerial SoftwareSerial32
-#endif
 
 #define FINGERPRINT_OK 0x00               //!< Command execution is complete
 #define FINGERPRINT_PACKETRECIEVEERR 0x01 //!< Error when receiving data package
